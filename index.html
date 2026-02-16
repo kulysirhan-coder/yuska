@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>💗 Вопрос</title>
+<title>💗 Юска</title>
 
 <style>
 body {
     margin: 0;
     height: 100vh;
-    background: #f7dcdc;
+    background: linear-gradient(135deg, #f7dcdc, #fdeaea);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +23,12 @@ body {
 h2 {
     color: #6b4c4c;
     margin-bottom: 30px;
+    font-size: 26px;
+}
+
+.name {
+    color: #e58a97;
+    font-weight: bold;
 }
 
 .buttons {
@@ -33,9 +39,9 @@ h2 {
 
 button {
     font-size: 18px;
-    padding: 15px 30px;
+    padding: 15px 32px;
     border: none;
-    border-radius: 14px;
+    border-radius: 16px;
     cursor: pointer;
     transition: transform 0.25s ease;
 }
@@ -55,7 +61,7 @@ button {
 <body>
 
 <div class="card">
-    <h2>Можешь ли ты стать моим возлюбленным?</h2>
+    <h2><span class="name">Юска</span>, ты любишь меня? 💗</h2>
     <div class="buttons">
         <button id="yes">Можно</button>
         <button id="no">Не хочу</button>
@@ -70,12 +76,10 @@ let yesScale = 1;
 let noScale = 1;
 
 noBtn.addEventListener("click", () => {
-    // уменьшаем "не хочу"
     noScale -= 0.15;
     if (noScale < 0.3) noScale = 0.3;
     noBtn.style.transform = `scale(${noScale})`;
 
-    // увеличиваем "можно"
     yesScale += 0.15;
     yesBtn.style.transform = `scale(${yesScale})`;
 });
@@ -87,11 +91,12 @@ yesBtn.addEventListener("click", () => {
             display:flex;
             justify-content:center;
             align-items:center;
-            background:#f7dcdc;
-            font-size:28px;
+            background:linear-gradient(135deg,#f7dcdc,#fdeaea);
+            font-size:30px;
             color:#e58a97;
+            text-align:center;
         ">
-            💖 Я так и знал!
+            💖 Я так и знал, Юска 💖
         </div>
     `;
 });
